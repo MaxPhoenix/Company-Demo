@@ -1,4 +1,4 @@
-package factory;
+package generator;
 
 import model.Employee;
 import tools.Utils;
@@ -7,18 +7,18 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class EmployeeFactory {
+public class EmployeeGenerator {
 
-    private static EmployeeFactory employeeFactory;
+    private static EmployeeGenerator employeeGenerator;
     private int employeeCount = 1;
 
-    private EmployeeFactory(){}
+    private EmployeeGenerator(){}
 
-    public static EmployeeFactory getEmployeeFactory(){
-        if(employeeFactory == null){
-            employeeFactory = new EmployeeFactory();
+    public static EmployeeGenerator getEmployeeGenerator(){
+        if(employeeGenerator == null){
+            employeeGenerator = new EmployeeGenerator();
         }
-        return employeeFactory;
+        return employeeGenerator;
     }
 
     private final String [] employeesPossibleFirstNames = { "Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter"};
